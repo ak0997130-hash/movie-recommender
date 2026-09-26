@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CineReel — Offline Movie Recommender</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand"><span class="mark">Cine<span>Reel</span></span><span class="tag">offline recommender</span></div>
+  <div class="stat" id="statLine"><b>0</b> </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <h1>Find your next watch, no signal required.</h1>
+    <p>A self-contained recommendation engine — 24 titles across every genre, scored against what you like. Data, engine and UI are split into separate files; nothing is fetched from a server.</p>
+    <div class="search"><input id="searchInput" placeholder="Search title, director, or keyword…"></div>
+    <div class="moods" id="moodRow"></div>
+  </section>
+
+  <div id="forYouSection" style="display:none">
+    <div class="section-head"><h2>Recommended for you</h2><span class="sub" id="forYouSub"></span></div>
+    <div class="grid" id="forYouGrid"></div>
+  </div>
+
+  <div class="section-head"><h2>Browse by genre</h2><span class="sub" id="countSub"></span></div>
+  <div class="genres" id="genreRow"></div>
+  <div class="grid" id="mainGrid"></div>
+  <div class="empty" id="emptyMsg" style="display:none">No titles match that combination. Try clearing a filter.</div>
+
+  <footer>CineReel · all data embedded locally · likes stored only in this browser</footer>
+</div>
+
+<div class="overlay" id="overlay"><div class="modal" id="modalBody"></div></div>
+
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
